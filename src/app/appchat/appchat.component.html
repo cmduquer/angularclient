@@ -1,0 +1,19 @@
+<mat-card>
+<h1>Welcome to {{title}}!</h1>
+<div class="chat-container">
+	<div class="chat">
+		<div class="message"></div>
+	</div>
+</div>
+
+
+<div class="footer">
+	<div class="send-button">
+
+		<input id="input" type="text" #input>
+	</div>
+
+</div>
+<button mat-fab color="primary" (click)="sendMessage(input.value)" type="button">Send</button>
+<button mat-fab color="primary" [routerLink]="['/car-list']">Cancel</button>
+</mat-card>
