@@ -15,7 +15,8 @@ import { Chat2Component } from './chat2/chat2.component';
 import { ChatSocketModule } from './chat-socket/chat-socket.module';
 import { Chat2Module } from './chat2/chat2.module';
 import { AppchatComponent } from './appchat/appchat.component';
-
+import { ChatListComponent } from './chat-list/chat-list.component';
+import { ChatmessageService } from './shared/chatMessageService/chatmessage.service';
 
 
 const appRoutes: Routes = [
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
   {
   	path: 'chat',
   	component: AppchatComponent	
+  },
+  {
+  	path: 'chat-list',
+  	component: ChatListComponent	
   }
 ];
 
@@ -44,6 +49,7 @@ const appRoutes: Routes = [
     CarListComponent,
     CarEditComponent,
     AppchatComponent,
+    ChatListComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,7 @@ const appRoutes: Routes = [
     ChatSocketModule,
     Chat2Module
   ],
-  providers: [CarService, GiphyService],
+  providers: [CarService, GiphyService, ChatmessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

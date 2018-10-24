@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../shared/car/car.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
-
+import { ChatMessage } from '../chat-message';
 
 @Component({
   selector: 'app-car-list',
@@ -10,6 +10,7 @@ import { GiphyService } from '../shared/giphy/giphy.service';
 })
 export class CarListComponent implements OnInit {
   cars: Array<any>;
+
 
   constructor(private carService: CarService, private giphyService: GiphyService) { }
 
